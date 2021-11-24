@@ -175,38 +175,13 @@ void set_resolution_X(uint8_t res);						// set resolution of X axis
 void set_resolution_Y(uint8_t res);						// set resolution of Y axis
 void set_resolution_Z(uint8_t res);						// set resolution of Z axis
 uint8_t get_gain(void);									// get gain
-void set_gain(uint8_t gain);							// set gain	// TODO
+void set_gain(uint8_t gain);							// set gain	
 uint8_t get_filter(void);								// get digital filter setting
 void set_filter(uint8_t conf);
-uint8_t get_hallconf(void);								// TODO
-void set_hallconf(uint8_t hall_conf);					// TODO
-void set_Z_series(uint8_t z_series);					// TODO: enable all plates for Z-measurement
-uint8_t get_Z_series(void);								// TODO
-void set_bist(uint8_t bist);							// TODO: Enabled the on-chip coil, applying a Z-field [Built-In Self Test]
-uint8_t get_ana_reserved_low(void); 					// TODO
-void set_ana_reserved_low(uint8_t ana_res); 			// TODO: Reserved IO trimming bits
-uint8_t get_burst_data_rate(void); 						// TODO
-void set_burst_data_rate(uint8_t data_rate); 			// TODO: Defines T_INTERVAL as BURST_DATA_RATE * 20ms
-uint8_t get_burst_sel(void); 							// TODO
-void set_burst_sel(uint8_t burst_sel); 					// TODO: Defines the MDATA in burst mode if SB command argument = 0
-uint8_t get_tcmp_en(void); 								// TODO
-void set_tcmp_en(uint8_t tcmp_en); 						// TODO: Enables on-chip sensitivity drift compensation
-uint8_t get_ext_trg(void); 								// TODO
-void set_ext_trg(uint8_t ext_trg); 						// TODO: Allows external trigger inputs when set, if TRIG_INT_SEL = 0
-uint8_t get_woc_diff(void); 							// TODO
-void set_woc_diff(uint8_t woc_diff); 					// TODO: Sets the Wake-up On Change based on Δ{sample(t),sample(t-1)}
-uint8_t get_comm_mode(void); 							// TODO
-void set_comm_mode(uint8_t comm_mode); 					// TODO: Allow only SPI [10b], only I2C [11b] or both [0Xb] according to CS pin
-uint8_t get_trig_int(void); 							// TODO
-void set_trig_int(uint8_t trig_int); 					// TODO: Puts TRIG_INT pin in TRIG mode when cleared, INT mode otherwise
 uint8_t get_osr(void);
 void set_osr(uint8_t osr); 								// Magnetic sensor ADC oversampling ratio
 uint8_t get_osr2(void);
 void set_osr2(uint8_t osr2); 							// Temperature sensor ADC oversampling ratio
-uint8_t get_sens_tc_lt(void); 							// TODO
-void set_sens_tc_lt(uint8_t sens_tc_lt); 				// TODO: Sensitivity drift compensation factor for T > TREF
-uint8_t get_sens_tc_ht(void);							// TODO
-void set_sens_tc_ht(uint8_t sens_tc_ht); 				// TODO: Sensitivity drift compensation factor for T < TREF
 uint16_t get_offset_X(void);
 void set_offset_X(uint16_t offset_X); 					// Constant offset correction, independent for X
 uint16_t get_offset_Y(void);
@@ -214,12 +189,6 @@ void set_offset_Y(uint16_t offset_Y); 					// Constant offset correction, indepe
 uint16_t get_offset_Z(void);
 void set_offset_Z(uint16_t offset_Z); 					// Constant offset correction, independent for Z
 void set_offsets(uint16_t field_intensity);
-uint16_t get_threshold_XY(void); 						// TODO
-void set_threshold_XY(uint16_t threshold_XY); 			// TODO: Wake-up On Change threshold, independent for X, Y
-uint16_t get_threshold_Z(void); 						// TODO
-void set_threshold_Z(uint16_t threshold_Z); 			// TODO: Wake-up On Change threshold, independent for Z
-uint16_t get_threshold_T(void); 						// TODO
-void set_threshold_T(uint16_t threshold_T); 			// TODO: Wake-up On Change threshold, independent for T
 RetStatus write_non_volatile_mem(void); 						// store volatile memory in non-volatile memory with HS command
 void read_non_volatile_mem(void);						// read non-volatile memory with HR command
 void set_multipliers(float* x, float* y, float* z);
